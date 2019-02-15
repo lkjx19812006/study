@@ -1,0 +1,59 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "01",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 4,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": "22",
+  "curveData": {
+    "comps": {
+      "animationCtrl": {
+        "hp": [
+          {
+            "frame": 0,
+            "value": 0
+          },
+          {
+            "frame": 2,
+            "value": 600
+          },
+          {
+            "frame": 4,
+            "value": 0
+          }
+        ],
+        "num": [
+          {
+            "frame": 0,
+            "value": 0
+          },
+          {
+            "frame": 2,
+            "value": 100
+          },
+          {
+            "frame": 4,
+            "value": 0
+          }
+        ],
+        "emissionRote": [
+          {
+            "frame": 0,
+            "value": 15
+          },
+          {
+            "frame": 2,
+            "value": 30
+          },
+          {
+            "frame": 4,
+            "value": 0
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

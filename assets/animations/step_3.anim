@@ -1,0 +1,39 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "step_3",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            296,
+            -159
+          ]
+        },
+        {
+          "frame": 2.0166666666666666,
+          "value": [
+            -366,
+            -159
+          ]
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "frame": 2,
+      "func": "onNextAnimation",
+      "params": [
+        4
+      ]
+    }
+  ]
+}
