@@ -37,6 +37,11 @@ cc.Class({
 			default: null
 		},
 
+		rootTemp:{
+			type:	cc.Prefab,
+			default: null
+		},
+
 		tips: {
 			type: cc.Node,
 			default: null
@@ -53,7 +58,6 @@ cc.Class({
 
 	onLoad() {
 		let animation = this.animation;
-	
 
 		cc.loader.loadRes("test_assets/atlas", cc.SpriteAtlas, (err, atlas) => {
 			let spriteFrames = atlas.getSpriteFrames();
@@ -68,17 +72,28 @@ cc.Class({
 		})
 	},
 
-	start() {
-		let scene = cc.director.getScene();
-		let spacex = 0;
-		let spacey = 0;
-		for (let i = 0; i < 10; i++) {
-			let pos = this.getPositionInView(this.tips);
-			let rootTemp = cc.instantiate(this.tips);
-			spacey += 40;
-			rootTemp.setPosition(pos.x, pos.y + spacey);
-			this.root.parent.addChild(rootTemp);
+	start() {	
+		let spacex = 0;	
+		for(let j = 0; j < 40; j++){
+			spacex += 30;
+			let spacey = 0;
+			for (let i = 0; i < 10; i++) {
+					let rootTemp = cc.instantiate(this.rootTemp);
+					rootTemp.scale = 0.2;
+					let pos = this.getPositionInView(this.tips);
+					pos.x = pos.x - 450;
+					spacey += 30;
+
+					rootTemp.x = pos.x + spacex;
+					rootTemp.y = pos.y + spacey;
+					
+					let animation = rootTemp.getComponent(cc.Animation);
+					//console.log(animation);
+					animation.play('sheep_run');
+					this.root.parent.addChild(rootTemp);
+				}
 		}
+	
 	
 	},
 
